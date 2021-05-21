@@ -1,0 +1,9 @@
+const racer_data = async () => {
+    let response = await axios.get(`https://ergast.com/api/f1/${query_season}/${query_round}/driverStandings.json`)
+    console.log(response.data)
+    for(let i = 0;i<7;i++){
+        nam
+        console.log(`Postion': ${i+1}, Nam  ${response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.givenName}`)
+}
+    }
+MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver
