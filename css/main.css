@@ -1,0 +1,75 @@
+
+/* RESET DEFAULT BROWSER STYLES*/
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;   
+}
+
+#header{
+    padding-top: 20px;
+    font-size: 40px; 
+    background-color: rgb(29, 26, 226);
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+}
+
+
+form{
+    /* padding: 20%; */
+    display:inline ;
+    text-align: center;
+    margin: auto;
+    align-content: center;
+    font-size: 20px;  
+}
+#form{
+    padding-top: 40px; 
+    padding-left: 30%;
+    padding-bottom: 50px;
+    color: white;
+    font-weight: bold;
+    align-content: center;
+    
+}
+#label{
+    padding-left: 10px;
+}
+
+form>#submitButton{
+    /* //width: 50%; */
+    margin-left: 10px;
+    font-size: 20px;
+}
+table{
+    margin: auto;
+    align-content: center;
+    width: 50%;
+    font-size: 20px ;
+    background-color: rgb(29, 26, 226);
+    border-style: solid;
+    color: white;
+    
+   /* border-color: hotpink;   */
+}
+
+th{
+    text-align: center;
+    /* width: 100%; */
+    
+}
+tr{
+    border-style: solid;
+    text-align: center;
+    width: 100%;
+    border-style: solid;
+    color: white;
+    
+}
+
+/* tr>td{
+    text-align: center;
+    width: 100%;
+    /* border-bottom: 1px;
+    border-style: solid; */
+} */

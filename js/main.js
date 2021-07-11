@@ -13,46 +13,67 @@ const racer_data = async (racers) => {
         sponsor = sponsor.charAt(0).toUpperCase() + sponsor.slice(1);
         let points = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].points;
         let result = [position,name,nationality,sponsor,points]
-        let row = table.insertRow();
-        for (key in result) {
-          let cell = row.insertCell();
-          let text = document.createTextNode(result[key]);
-          cell.appendChild(text);
-        }
+        // let row = table.insertRow();
+        // for (key in result) {
+        //   let cell = row.insertCell();
+        //   let text = document.createElement('td')
+        //   text.innerHTML = result[key];
+        //   //document.append(text)
+        //   cell.appendChild(text);
+        // }
         racers.push(result);
     }
+    console.log(racers)
+    
+    for (var row=0; row<7;row++){
+      var crow=racers[row]
+      console.log('crow', crow)
+      
+      for (var val=0; val<5;val++){
+        var x = document.getElementById("table").rows[row+1].cells;
+        x[val].innerHTML = crow[val];
+      }}
     return racers
 }
 
 
-function generateTableHead(table) {
-    table.deleteTHead()
-    let thead = table.createTHead();
-    let row = thead.insertRow();
-    for (let key of headings) {
-        let th = document.createElement("th");
-        let text = document.createTextNode(key);
-        th.appendChild(text);
-        row.appendChild(th);
-      }
+// function generateTableHead(table) {
+//     table.deleteTHead()
+//     let thead = table.createTHead();
+//     let row = thead.insertRow();
+//     for (let key of headings) {
+//         let th = document.createElement("th");
+//         let text = document.createTextNode(key);
+//         th.appendChild(text);
+//         row.appendChild(th);
+//       }
+// }
+function fillTable(table){
+
 }
 
 let table = document.querySelector("table");  
 let query_season
 let query_round
-let headings =['Position','Name','Nationality','Sponsor','Points']
+//let headings =['Position','Name','Nationality','Sponsor','Points']
 
 form.addEventListener('submit', (event) => {
-  for(var i = table.rows.length - 1; i > 0; i--)
-  {
-      table.deleteRow(i);
-  }
+    document.getElementById("table").style.display = '';
+  
     event.preventDefault();
     query_season = document.querySelector('#season').value
     query_round = document.querySelector('#round').value
-    const racers=[]
-    generateTableHead(table);
-    racer_data(racers)  ;
+    var racers=[]
+    let data=racer_data(racers)  ;
+    console.log('data', data)
+   
 })
 
+function toggle() {
+  if( document.getElementById("hidethis").style.display=='none' ){
+    document.getElementById("hidethis").style.display = 'table-row'; // set to table-row instead of an empty string
+  }else{
+    document.getElementById("hidethis").style.display = 'none';
+  }
+ }
   

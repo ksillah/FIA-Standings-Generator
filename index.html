@@ -5,25 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
     <title>JavaScipt Dom</title>
 </head>
-<body>
+<body style="background-image:url('racecar.jpg');background-repeat: no-repeat; background-size: cover;">
     <!--using the DOm to handle user input-->
+    <div id='header'> FIA Formula One World Championship Standings</div>
+    <div id='form'>
     <form name="testData" id="testDataForm">
-        <label for="season">Season</label>
-        <input type="text" name="season" id="season">
+        <label for="season" id='label' >Season</label>
+        <input type="text" placeholder="Enter a year 1950 - 2021" name="season" id="season">
 
-        <label for="round">Round</label>
-        <input type="text" name="round" id="round">
+        <label for="round" id='label'>Round</label>
+        <input type="text" name="round" placeholder="Enter a round" id="round">
 
-        <button type="submit" id='submitButton'>Submit Me</button>
+        <button type="submit" id='submitButton'>Get Standings</button>
 
 
     </form>
-    <table>
-        
-    </table>
+    </div>
+    <table id="table" style="display: none;">
+        <tr>
+          <th>Position</th>
+          <th>Name</th>
+          <th>Nationality</th>
+          <th>Sponsor</th>
+          <th>Points</th>
+        </tr>
+        <tr id=1>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id=2>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id=3>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id=4>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id=5>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id=6>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id=7>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
 
 </body>
 </html>
